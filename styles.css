@@ -1,7 +1,9 @@
 *{
     font-family: "Inter", sans-serif;
     margin: 0;
-    padding: 0;
+}
+.hide{
+    display: none !important;
 }
 body{
     background: #1A0B2E;
@@ -90,6 +92,9 @@ body{
 nav{
     border-bottom: 1px solid rgba(65, 37, 103, 1);
 }
+#hamburger-menu{
+    display: none;
+}
 /* End Navigation Section */
 
 
@@ -111,7 +116,6 @@ nav{
     background: url(assets/hero-circle.png);
     background-size: cover;
     background-position: center;
-    margin-bottom: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -143,6 +147,7 @@ nav{
     font-size: 16px;
     font-weight: 400;
     margin-top: 8px;
+    text-align: center;
 }
 #hero-buttons{
     display: flex;
@@ -389,7 +394,7 @@ nav{
 /* Footer Section */
 footer{
     background: url(assets/footer-bg.png);
-    height: 412px;
+    padding: 120px 0;
     display: flex;
     align-items: center;
     background-repeat: no-repeat;
@@ -400,16 +405,17 @@ footer{
     font-size: 60px;
     text-align: center;
 }
-#sss span{
+#footer-logo span{
     background: linear-gradient(var(--linear-gradient));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
 }
 #footer-section-links{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     align-items: center;
-    justify-content: center;
+    justify-items: center;
     gap: 40px;
     margin-top: 32px;
 }
@@ -441,4 +447,155 @@ footer{
     color: rgba(255, 255, 255, 0.6);
     margin-top: 32px;
     text-align: center;
+}
+
+@media screen and (max-width: 576px) {
+    /* Hamburger Menu */
+    #nav-section{
+        padding: 20px 20px;
+    }
+    #nav-button, #nav-link{
+        display: none;
+    }
+    #hamburger-menu{
+        display: block;
+    }
+    /* Hero Banner Section Responsive */
+    #hero-section{
+        max-width: 440px;
+        background-position: 0px 65px;
+        height: 466px;
+        background-size: 100%;
+        padding: 40px 0px;
+        padding: 0 20px;
+    }
+    #hero-image{
+        width: 200px;
+        height: 200px;
+    }
+    #hero-image img{
+        height: 80px;
+    }
+    #new{
+        top: 5px;
+        right: 0px;
+    }
+    #hero-text-button h1{
+        font-size: 40px;
+        font-weight: 800;
+        margin-top: 24px;
+    }
+
+    /* About The Podcast Section Responsive */
+    .podcast-section{
+        padding: 0 20px;
+    }
+    #podcast-text{
+        padding-top: 40px;
+    }
+    #podcast-text h1{
+        font-size: 32px;
+        font-weight: 700;
+    }
+    #podcast-text #p-1{
+        margin-bottom: 10px;
+    }
+    #podcast-text #p-1 br{
+        display: none;
+    }
+    #podcast-text #p-2{
+        padding-bottom: 39px;
+        margin-bottom: 40px;
+    }
+    #podcast-counter-container{
+        grid-template-columns: repeat(2, 1fr);
+        padding-bottom: 40px;
+    }
+
+    /* Why Choose TechWave Section */
+    #benefits-section{
+        padding: 40px 20px;
+    }
+    #benefits-heading h1{
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 16px;
+    }
+    #benefits-details{
+        gap: 16px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+        "benefits-grid-1"
+        "benefits-grid-2"
+        "benefits-grid-3"
+        "benefits-grid-4"
+        "benefits-grid-5"
+        ;
+    }
+
+    /* Featured Episodes Section */
+    .feature-section{
+        padding: 40px 20px 60px;
+    }
+    #featured-heading h1{
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 24px;
+    }
+    .fretured-video-container{
+        gap: 16px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .fretured-video h2{
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+    .fretured-video-duration{
+        margin-top: 8px;
+    }
+
+    /* Meet the Host Section/ Challenging Part */
+    .host-profile-section{
+        padding: 0px 20px 40px;
+    }
+    #host-profile-heading h1{
+        font-size: 32px;
+        margin-bottom: 24px;
+    }
+    #host-profile-container{
+        flex-direction: column;
+        padding: 24px;
+    }
+    #host-profile-info h2{
+        text-align: center;
+        font-size: 24px;
+    }
+    #host-profile-info p{
+        text-align: center;
+    }
+    #host-profile-links{
+        justify-content: center;
+    }
+
+    /* Footer */
+    footer{
+        padding: 40px 0px;
+        background: url(assets/footer-bg.png), rgb(32, 15, 65);
+        background-size: 700px;
+        background-position: center 40%;
+    }
+    #footer-section h1{
+        font-size: 45px;
+    }
+
+    #footer-section-links{
+        gap: 20px;
+        grid-template-columns: 70px 150px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 24px;
+    }
+    #footer-section p{
+        margin-top: 24px;
+    }
 }
