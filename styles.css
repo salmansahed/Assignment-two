@@ -60,8 +60,12 @@ body{
     font-weight: 500;
 }
 #nav-link a{
-    color: white;
+    color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+#nav-link a:hover{
+    color: yellow;
 }
 /* Navigation Button */
 #nav-button{
@@ -77,6 +81,11 @@ body{
     font-weight: 600;
     color: white;
     cursor: pointer;
+    transition: all 0.4s ease;
+}
+#nav-button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0px 0px 18px rgba(251, 255, 0, 0.4);
 }
 nav{
     border-bottom: 1px solid rgba(65, 37, 103, 1);
@@ -153,15 +162,31 @@ nav{
     align-items: center;
     gap: 8px;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+#hero-button-1:hover{
+    transform: translateY(-3px);
+    box-shadow: 0px 0px 18px rgba(251, 255, 0, 0.4);
+
 }
 
 #hero-button-2{
+    font-size: 16px;
+    font-weight: 600;
     padding: 12px 20px;
     border: 1px solid rgba(0, 255, 136, 1);
     border-radius: 99px;
     background-color: transparent;
     color: rgba(0, 255, 136, 1);
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+#hero-button-2:hover{
+    transform: translateY(-3px);
+    box-shadow: 0px 0px 18px rgba(0, 255, 0, 0.4);
 }
 
 
@@ -341,6 +366,7 @@ nav{
     font-weight: 400;
     color: rgba(255, 255, 255, 0.6);
     margin-top: 16px;
+    line-height: 24px;
 }
 #host-profile-links{
     display: flex;
@@ -354,6 +380,9 @@ nav{
     padding: 10px;
     display: flex;
     align-items: center;
+}
+#host-profile-links a:hover{
+    background: linear-gradient(47.64deg, rgba(247, 233, 63, 0.2),rgba(251, 9, 180, 0.2),rgba(145, 0, 248, 0.2));
 }
 
 
@@ -392,6 +421,19 @@ footer{
     gap: 8px;
     font-size: 16px;
     font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+#footer-section-links #footer-spotify:hover{
+    color:#1ED760;
+}
+#footer-section-links #footer-apple-podcast:hover{
+    color:#d56dfb;
+}
+#footer-section-links #footer-youtube:hover{
+    color:#ee0e0e;
+}
+#footer-section-links #footer-facebook:hover{
+    color:#1877F2;
 }
 #footer-section p{
     font-size: 16px;
