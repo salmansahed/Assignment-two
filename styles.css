@@ -355,3 +355,48 @@ nav{
     display: flex;
     align-items: center;
 }
+
+
+/* Footer Section */
+footer{
+    background: url(assets/footer-bg.png);
+    height: 412px;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#footer-section h1{
+    font-size: 60px;
+    text-align: center;
+}
+#sss span{
+    background: linear-gradient(var(--linear-gradient));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+#footer-section-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 32px;
+}
+#footer-section-links a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 500;
+}
+#footer-section p{
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 32px;
+    text-align: center;
+}
