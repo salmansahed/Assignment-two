@@ -265,6 +265,7 @@ nav{
     font-size: 16px;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.8);
+    margin-top: 16px;
 }
 
 
@@ -497,8 +498,6 @@ footer{
         background-position: 0px 105px;
         height: 466px;
         background-size: 100%;
-        padding-top: 40px;
-        padding-bottom: 40px;
     }
     #hero-image{
         width: 200px;
@@ -538,6 +537,7 @@ footer{
     #podcast-counter-container{
         grid-template-columns: repeat(2, 1fr);
         padding-bottom: 40px;
+        row-gap: 40px;
     }
 
     /* Benefits Section Mobile Responsive*/
