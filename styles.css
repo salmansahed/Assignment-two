@@ -1,10 +1,11 @@
+/*  */
 *{
     font-family: "Inter", sans-serif;
     margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
 }
-.hide{
-    display: none !important;
-}
+
 body{
     background: #1A0B2E;
     color: white;
@@ -13,6 +14,20 @@ body{
     --linear-gradient: 47.64deg, rgba(247, 233, 63, 1),rgba(251, 9, 180, 1),rgba(145, 0, 248, 1);
     --linear-gradient-hover: -47.64deg, rgba(247, 233, 63, 1),rgba(251, 9, 180, 1),rgba(145, 0, 248, 1)
 }
+
+@keyframes mic-pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Custom Width */
 .custom-width{
     max-width: 1200px;
     margin: 0 auto;
@@ -23,7 +38,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 0;
+    padding: 24px 20px;
 }
 /* Navigation Logo */
 #nav-logo{
@@ -32,6 +47,7 @@ body{
     position: relative;
     z-index: 1;
 }
+
 #nav-logo a{
     text-decoration: none;
     color: white;
@@ -60,8 +76,11 @@ body{
     gap: 32px;
     font-size: 16px;
     font-weight: 500;
+    text-align: center;
 }
+
 #nav-link a{
+    text-align: center;
     color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
     transition: all 0.2s ease-in-out;
@@ -95,7 +114,6 @@ nav{
 #hamburger-menu{
     display: none;
 }
-/* End Navigation Section */
 
 
 /* Hero Banner Section */
@@ -109,6 +127,8 @@ nav{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 #hero-image{
     width: 350px;
@@ -120,6 +140,9 @@ nav{
     align-items: center;
     justify-content: center;
     position: relative;
+}
+#hero-mic{
+    animation: mic-pulse 3s ease-in-out infinite;
 }
 #new{
     position: absolute;
@@ -196,6 +219,10 @@ nav{
 
 
 /* About The Podcast Section */
+.podcast-section{
+    padding-left: 20px;
+    padding-right: 20px;
+}
 #podcast-text{
     text-align: center;
     padding-top: 50px;
@@ -241,9 +268,9 @@ nav{
 }
 
 
-/* benefits */
+/* Benefits Section */
 #benefits-section{
-    padding: 120px 0;
+    padding: 120px 20px;
     background: rgba(35, 14, 61, 1);
 }
 #benefits-heading h1{
@@ -306,7 +333,7 @@ nav{
     gap: 30px;
 }
 .feature-section{
-    padding: 120px 0;
+    padding: 120px 20px;
 }
 #featured-heading h1{
     font-size: 48px;
@@ -345,6 +372,8 @@ nav{
 /* Meet The Host/ Challenging Part */
 .host-profile-section{
     padding-bottom: 120px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 #host-profile-heading h1{
     font-size: 48px;
@@ -449,10 +478,13 @@ footer{
     text-align: center;
 }
 
+
+/* Mobile Responsive */
 @media screen and (max-width: 576px) {
-    /* Hamburger Menu */
+    /* Hamburger Menu Mobile Responsive*/
     #nav-section{
-        padding: 20px 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
     #nav-button, #nav-link{
         display: none;
@@ -462,12 +494,11 @@ footer{
     }
     /* Hero Banner Section Responsive */
     #hero-section{
-        max-width: 440px;
-        background-position: 0px 65px;
+        background-position: 0px 105px;
         height: 466px;
         background-size: 100%;
-        padding: 40px 0px;
-        padding: 0 20px;
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
     #hero-image{
         width: 200px;
@@ -486,10 +517,7 @@ footer{
         margin-top: 24px;
     }
 
-    /* About The Podcast Section Responsive */
-    .podcast-section{
-        padding: 0 20px;
-    }
+    /* About The Podcast Section Mobile Responsive */
     #podcast-text{
         padding-top: 40px;
     }
@@ -512,9 +540,10 @@ footer{
         padding-bottom: 40px;
     }
 
-    /* Why Choose TechWave Section */
+    /* Benefits Section Mobile Responsive*/
     #benefits-section{
-        padding: 40px 20px;
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
     #benefits-heading h1{
         font-size: 32px;
@@ -533,9 +562,10 @@ footer{
         ;
     }
 
-    /* Featured Episodes Section */
+    /* Featured Episodes Section Mobile Responsive*/
     .feature-section{
-        padding: 40px 20px 60px;
+        padding-top: 40px;
+        padding-bottom: 60px;
     }
     #featured-heading h1{
         font-size: 32px;
@@ -554,9 +584,9 @@ footer{
         margin-top: 8px;
     }
 
-    /* Meet the Host Section/ Challenging Part */
+    /* Meet the Host Section/ Challenging Part  Mobile Responsive*/
     .host-profile-section{
-        padding: 0px 20px 40px;
+        padding-bottom: 40px;
     }
     #host-profile-heading h1{
         font-size: 32px;
@@ -577,7 +607,7 @@ footer{
         justify-content: center;
     }
 
-    /* Footer */
+    /* Footer Mobile Responsive*/
     footer{
         padding: 40px 0px;
         background: url(assets/footer-bg.png), rgb(32, 15, 65);
@@ -597,5 +627,21 @@ footer{
     }
     #footer-section p{
         margin-top: 24px;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    /* Benefits Section Tablet Responsive */
+    #benefits-details{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "benefits-grid-1 benefits-grid-1"
+        "benefits-grid-2 benefits-grid-3"
+        "benefits-grid-4 benefits-grid-5"
+        ;
+    }
+    /* Future Video Section Tablet Responsive */
+    .fretured-video-container{
+        grid-template-columns: repeat(2, 1fr);
     }
 }
